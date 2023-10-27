@@ -1,0 +1,136 @@
+{
+  "posts": [
+    {
+      "picture": "https://res.cloudinary.com/dhxjitf9n/image/upload/v1698425446/X%20clone/arul-prakassam.jpg",
+      "name": "Arul Prakassam G",
+      "username": "ArulPrakassam",
+      "time": "1h",
+      "description": "Hello! Welcome to my X clone",
+      "engage": {
+        "Repost": 0,
+        "Like": 10,
+        "View": 100,
+        "Reply": 0
+      }
+    },
+    {
+      "picture": "https://res.cloudinary.com/dhxjitf9n/image/upload/v1698425512/X%20clone/switch2knowledge.jpg",
+      "name": "Switch2Knowledge",
+      "username": "Switch2Know",
+      "time": "Sep 10, 2023",
+      "description": "Website: https://www.switch2knowledge.com \nYouTube channel: https://youtube.com/channel/UCzz1ofQIE6VJm73BSOkgxUw \nTwitter: https://twitter.com/Switch2Know \nGoogle News: https://news.google.com/s/CBIw8daTmFs?sceid=IN:en&sceid=IN:en&r=11&oc=1 \nQuora space: https://switch2knowledge.quora.com/",
+      "engage": {
+        "Repost": 1,
+        "Like": 0,
+        "View": 0,
+        "Reply": 0
+      },
+      "reposted": true
+    },
+    {
+      "picture": "https://res.cloudinary.com/dhxjitf9n/image/upload/v1698425446/X%20clone/arul-prakassam.jpg",
+      "name": "Arul Prakassam G",
+      "username": "ArulPrakassam",
+      "time": "Sep 12, 2023",
+      "description": "Twitter: https://twitter.com/ArulPrakassam \nPortfolio: https://arulprakassam.github.io \nLinkedIn Profile: https://www.linkedin.com/in/arul-prakassam \nYouTube channel: https://youtube.com/channel/UCzz1ofQIE6VJm73BSOkgxUw \nGitHub: https://github.com/ArulPrakassam \nQuora: https://www.quora.com/profile/Arul-Prakassam-G \nFacebook: https://www.facebook.com/ArulPrakassam \nBlogger Profile: https://www.blogger.com/profile/07905333727450638216",
+      "engage": {
+        "Repost": 0,
+        "Like": 1,
+        "View": 100,
+        "Reply": 0
+      }
+    },
+    {
+      "picture": "https://res.cloudinary.com/dhxjitf9n/image/upload/v1698425446/X%20clone/arul-prakassam.jpg ",
+      "name": "Arul Prakassam G",
+      "username": "ArulPrakassam",
+      "time": "Sep 19, 2023",
+      "description": "This is my Zomato Food ordering UI clone, Hungrezy https://hungrezy-app.netlify.app/",
+      "urlToImage": "https://res.cloudinary.com/dhxjitf9n/image/upload/v1690539064/Arul/hungrezy-app.jpg",
+      "alt": "Hungrezy App",
+      "engage": {
+        "Repost": 0,
+        "Like": 2,
+        "View": 100,
+        "Reply": 0
+      }
+    },
+    {
+      "picture": "https://res.cloudinary.com/dhxjitf9n/image/upload/v1698425446/X%20clone/arul-prakassam.jpg ",
+      "name": "Arul Prakassam G",
+      "username": "ArulPrakassam",
+      "time": "Sep 21, 2023",
+      "description": "Bookmyshow UI clone https://bookmyshow-clone-project.netlify.app/",
+      "urlToImage": "https://res.cloudinary.com/dhxjitf9n/image/upload/v1679124333/Arul/bookmyshow-logo.png",
+      "alt": "Bookmyshow UI clone",
+      "engage": {
+        "Repost": 0,
+        "Like": 0,
+        "View": 100,
+        "Reply": 0
+      }
+    },
+    {
+      "picture": "https://res.cloudinary.com/dhxjitf9n/image/upload/v1698425446/X%20clone/arul-prakassam.jpg ",
+      "name": "Arul Prakassam G",
+      "username": "ArulPrakassam",
+      "time": "Sep 23, 2023",
+      "description": "Visit my projects - https://arulprakassam.github.io/projects.html",
+
+      "engage": {
+        "Repost": 0,
+        "Like": 15,
+        "View": 100,
+        "Reply": 0
+      }
+    },
+    {
+      "picture": "https://res.cloudinary.com/dhxjitf9n/image/upload/v1698425512/X%20clone/switch2knowledge.jpg",
+      "name": "Switch2Knowledge",
+      "username": "Switch2Know",
+      "time": "Sep 25, 2023",
+      "description": "Subscribe to my YouTube channel: https://youtube.com/channel/UCzz1ofQIE6VJm73BSOkgxUw",
+      "urlToImage": "https://res.cloudinary.com/dhxjitf9n/image/upload/v1679131526/switch2knowledge-website.png",
+      "alt": "Switch2Knowledge youtube channel",
+      "engage": {
+        "Repost": 1,
+        "Like": 0,
+        "View": 0,
+        "Reply": 0
+      },
+      "reposted": true
+    },
+    {
+      "picture": "https://res.cloudinary.com/dhxjitf9n/image/upload/v1698425512/X%20clone/switch2knowledge.jpg",
+      "name": "Switch2Knowledge",
+      "username": "Switch2Know",
+      "time": "Sep 27, 2023",
+      "description": "Visit my website: https://www.switch2knowledge.com",
+      "urlToImage": "https://res.cloudinary.com/dhxjitf9n/image/upload/v1679131526/switch2knowledge-website.png",
+      "alt": "Switch2Knowledge website",
+      "engage": {
+        "Repost": 1,
+        "Like": 0,
+        "View": 0,
+        "Reply": 0
+      },
+      "reposted": true
+    },
+    {
+      "picture": "https://res.cloudinary.com/dhxjitf9n/image/upload/v1698425446/X%20clone/arul-prakassam.jpg ",
+      "name": "Arul Prakassam G",
+      "username": "ArulPrakassam",
+      "time": "Sep 28, 2023",
+      "description": "Visit portfolio - https://arulprakassam.github.io/",
+      "urlToImage": "https://res.cloudinary.com/dhxjitf9n/image/upload/v1694519409/Arul/Arul-portfolio-new.jpg",
+      "alt": "Arul Prakassam - Portfolio",
+      "engage": {
+        "Repost": 0,
+        "Like": 15,
+        "View": 100,
+        "Reply": 0
+      }
+    }
+  ],
+  "likes": []
+}

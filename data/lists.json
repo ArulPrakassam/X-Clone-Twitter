@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Tech news",
+    "members": 80,
+    "followers": 250,
+    "profile": "pink"
+  },
+  {
+    "name": "JS news and updates",
+    "members": 800,
+    "followers": 55000,
+    "profile": "aqua"
+  },
+  {
+    "name": "Web services",
+    "members": 850,
+    "followers": 25030,
+    "profile": "red"
+  }
+]
