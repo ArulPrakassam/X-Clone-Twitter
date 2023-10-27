@@ -20,24 +20,25 @@ const fetchData = async (category) => {
           singleArticle.publishedAt
       );
       const users = await randomUsers(items.length);
+      if (users) {
+        const newsItems = items.map((item, index) => {
+          const { description, urlToImage, title, publishedAt } = item;
 
-      const newsItems = items.map((item, index) => {
-        const { description, urlToImage, title, publishedAt } = item;
-
-        const time = new Date(publishedAt).toLocaleDateString("ir-IR", {
-          day: "numeric",
-          year: "numeric",
-          month: "short",
+          const time = new Date(publishedAt).toLocaleDateString("ir-IR", {
+            day: "numeric",
+            year: "numeric",
+            month: "short",
+          });
+          return {
+            description,
+            urlToImage,
+            title,
+            time,
+            ...users[index],
+          };
         });
-        return {
-          description,
-          urlToImage,
-          title,
-          time,
-          ...users[index],
-        };
-      });
-      return newsItems;
+        return newsItems;
+      }
     }
     return;
   } catch (error) {
