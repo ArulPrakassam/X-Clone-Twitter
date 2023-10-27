@@ -1,0 +1,220 @@
+/* latest trending */
+
+.latest-trending {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-right: auto;
+  z-index: 1;
+  height: 100%;
+}
+
+/* what is happening */
+
+.whatis-happening,
+.whoto-follow {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--latest-trending-section-bg);
+  width: 350px;
+}
+
+.whatis-happening h1,
+.whoto-follow h1 {
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--secondary);
+  padding: 20px;
+}
+.latest-trending-topics,
+.whoto-follow-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+.latest-trending-single-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+.latest-trending-single-item:hover {
+  background-color: var(--background-hover);
+}
+.trending-category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--main-color-2);
+}
+.trending-category span {
+  font-size: 1rem;
+  border-radius: 30px;
+  padding: 3px;
+}
+.trending-category span:hover {
+  color: var(--main-color);
+  background-color: var(--three-dots-hover);
+}
+.trending-content {
+  display: flex;
+  flex-direction: column;
+}
+.trending-content-title {
+  font-size: 1rem;
+  color: var(--secondary);
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.posts-count {
+  font-size: 0.87rem;
+  color: var(--main-color-2);
+}
+.trending-show-more {
+  margin-top: 20px;
+  padding: 20px;
+  padding-top: 0;
+}
+.trending-show-more p {
+  color: var(--main-color);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+/* who to follow */
+
+.whoto-follow {
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+.profile-box-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+}
+.whoto-follow-list .profile-box {
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  width: 100%;
+  justify-content: flex-start;
+}
+.profile-box-wrapper:hover {
+  background-color: var(--background-hover);
+}
+.follow-btn {
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 20px;
+  padding: 8px 14px;
+  font-size: 0.8rem;
+  border: none;
+  background-color: var(--secondary);
+  color: var(--primary);
+  font-weight: 700;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.follow-btn:hover {
+  filter: brightness(90%);
+}
+
+/* search bar */
+.searchbar {
+  margin-bottom: 20px;
+  width: 350px;
+}
+.search-main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--main-color-2);
+  border-radius: 40px;
+  background-color: var(--latest-trending-section-bg);
+  padding: 10px;
+}
+.search-icon {
+  font-size: 1.2rem;
+  margin-left: 5px;
+}
+.close-btn {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.input-area::placeholder {
+  font-size: 1rem;
+}
+.input-area {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin-left: 15px;
+  width: 100%;
+  color: var(--secondary);
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 1333px) {
+  .whatis-happening,
+  .whoto-follow,
+  .searchbar {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .search-main {
+    padding: 10px;
+  }
+  .search-icon,
+  .close-btn {
+    font-size: 1rem;
+  }
+
+  .input-area::placeholder,
+  .input-area {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .trending-category {
+    font-size: 0.75rem;
+    margin-bottom: 3px;
+  }
+  .trending-category span {
+    font-size: 0.85rem;
+  }
+
+  .trending-content-title {
+    font-size: 0.85rem;
+    margin-bottom: 3px;
+  }
+  .posts-count {
+    font-size: 0.75rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .search-main {
+    padding: 8px;
+  }
+  .search-icon,
+  .close-btn {
+    font-size: 0.85rem;
+  }
+
+  .input-area::placeholder,
+  .input-area {
+    font-size: 0.85rem;
+  }
+}

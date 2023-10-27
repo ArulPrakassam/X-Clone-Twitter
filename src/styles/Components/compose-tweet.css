@@ -1,0 +1,127 @@
+/* compose tweet section */
+.compose-tweet-section {
+  margin-top: 20px;
+  display: flex;
+  padding-bottom: 20px;
+  border-bottom: 0.5px solid var(--border-color);
+}
+.compose-tweet-section .profile-img {
+  margin-left: 20px;
+  background: none;
+}
+.compose-tweet-section .profile-img img {
+  background: var(--profile-background);
+}
+.visibility {
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 5px 8px;
+  margin-bottom: 10px;
+}
+.visibility p {
+  font-size: 0.88rem;
+  letter-spacing: 1px;
+  color: var(--main-color);
+  font-weight: 500;
+  cursor: pointer;
+}
+.compose-tweet {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-right: 20px;
+  width: 100%;
+}
+
+.tweet-input-box {
+  display: grid;
+}
+.tweet-input-box::after {
+  content: attr(data-replicated-value) " ";
+  visibility: hidden;
+}
+#tweet-box {
+  resize: none;
+  outline: none;
+}
+.tweet-input-box::after,
+#tweet-box {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  margin-top: 20px;
+  color: var(--secondary);
+  font-size: 1.4rem;
+  font-family: Arial, Helvetica, sans-serif;
+  white-space: pre-wrap;
+  grid-area: 1 / 1 / 2 / 2;
+  overflow: hidden;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+.compose-tweet-section-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-top: 0.5px solid var(--border-color);
+  margin-top: 20px;
+  padding-top: 20px;
+}
+.icons-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+.icons-list span {
+  margin-right: 20px;
+  font-size: 1.2rem;
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.compose-tweet-section .post-tweet-button {
+  margin: 0;
+  border-radius: 100px;
+  width: auto;
+}
+.compose-tweet-section .post-tweet-btn {
+  font-size: 0.95rem;
+  padding: 8px 18px;
+}
+
+@media screen and (max-width: 363px) {
+  .visibility p {
+    font-size: 0.8rem;
+  }
+  .icons-list span {
+    font-size: 1rem;
+  }
+  .tweet-input-box::after,
+  #tweet-box {
+    font-size: 1.2rem;
+  }
+  .compose-tweet-section .post-tweet-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+  .compose-tweet-section .profile-img {
+    width: 40px;
+  }
+}
+@media screen and (max-width: 285px) {
+  .visibility p {
+    font-size: 0.7rem;
+  }
+
+  .tweet-input-box::after,
+  #tweet-box {
+    font-size: 1rem;
+  }
+  .compose-tweet-section .post-tweet-btn {
+    font-size: 0.8rem;
+    padding: 7px 14px;
+  }
+}

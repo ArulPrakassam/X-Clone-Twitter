@@ -1,0 +1,23 @@
+/* fixed tweet btn*/
+
+.fixed-tweet-button {
+  position: fixed;
+  bottom: 10%;
+  right: 20px;
+  transform: translateY(300%);
+  transition: transform 0.5s ease-out;
+}
+
+@media screen and (max-width: 375px) {
+  .fixed-tweet-button .post-tweet-btn {
+    font-size: 1rem;
+    padding: 13px 15px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .fixed-tweet-button {
+    right: 10px;
+    bottom: 8%;
+  }
+}

@@ -1,0 +1,27 @@
+/* floating message section */
+
+.floating-message-section {
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+  border: 0;
+  background-color: var(--primary);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: 0px 0px 10px 0.5px #adb5bd;
+  transition: var(--transition);
+  z-index: 2;
+  width: 420px;
+  height: 400px;
+  color: var(--secondary);
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.floating-message-section::-webkit-scrollbar {
+  display: none;
+}
+
+.floating-message-section .header-top {
+  padding-top: 5px;
+}

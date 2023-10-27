@@ -1,0 +1,283 @@
+/* tweet container */
+
+.tweets-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 200px;
+}
+.single-tweet-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.single-tweet {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+  padding-top: 6px;
+  margin-top: 3px;
+  padding-bottom: 5px;
+  border-bottom: 0.5px solid var(--border-color);
+  cursor: pointer;
+}
+.single-tweet:hover {
+  background-color: var(--single-tweet-hover);
+}
+.tweet-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.tweet-account-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.tweet-account {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.tweet-account-details {
+  display: flex;
+  align-items: center;
+}
+.tweet-account #name,
+.tweet-account #username {
+  margin-right: 10px;
+}
+
+.tweet-account #username {
+  max-width: 120px;
+}
+
+.tweet-options {
+  color: var(--main-color-2);
+  font-size: 1rem;
+  border-radius: 30px;
+  padding: 3px;
+}
+.tweet-options:hover {
+  color: var(--main-color);
+  background-color: var(--three-dots-hover);
+}
+
+/* tweet info */
+
+.tweet-info p {
+  font-size: 1rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.tweet-content-img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.tweet-content-img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 0.5px solid var(--main-color-2);
+  border-radius: inherit;
+  width: inherit;
+  height: auto;
+}
+.tweet-content-img.loaded::before {
+  content: none;
+}
+.tweet-content-img img {
+  max-width: 100%;
+  object-fit: inherit;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  object-position: center;
+  transition: all 200ms ease-in-out;
+}
+
+/* tweet features */
+.tweet-features {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+.tweet-features div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--main-color-2);
+  cursor: pointer;
+}
+.feature-icon {
+  border-radius: 100%;
+  padding: 4px 6px;
+  font-size: 1rem;
+}
+.feature-count {
+  font-size: 0.78rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.hover-blue:hover .feature-icon {
+  color: var(--main-color);
+  background-color: rgba(29, 156, 240, 0.212);
+}
+.hover-blue:hover .feature-count {
+  color: var(--main-color);
+}
+.hover-green:hover .feature-icon {
+  color: rgb(0, 186, 124);
+  background-color: rgba(0, 186, 124, 0.233);
+}
+.hover-green:hover .feature-count {
+  color: rgb(0, 186, 124);
+}
+
+.hover-red:hover .feature-icon {
+  color: rgb(199, 2, 2);
+  background-color: rgba(199, 2, 2, 0.123);
+}
+.hover-red:hover .feature-count {
+  color: rgb(199, 2, 2);
+}
+
+/* repost tag */
+
+.you-reposted {
+  padding-top: 3px;
+  padding-left: 20px;
+  padding-bottom: 0;
+}
+.you-reposted p {
+  font-size: 0.85rem;
+  color: var(--main-color-2);
+  font-weight: bold;
+  cursor: pointer;
+}
+.you-reposted span {
+  margin-right: 10px;
+  font-size: 0.85rem;
+}
+@media screen and (max-width: 534px) {
+  .tweet-info p {
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 438px) {
+  .tweet-account #name {
+    font-size: 0.9rem;
+  }
+  .tweet-account #username {
+    font-size: 0.77rem;
+  }
+
+  .tweet-info p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 382px) {
+  .single-tweet {
+    padding: 10px;
+    padding-top: 6px;
+    padding-bottom: 0;
+  }
+  .you-reposted {
+    padding-left: 10px;
+  }
+}
+@media screen and (max-width: 343px) {
+  .feature-icon {
+    font-size: 0.88rem;
+  }
+  .feature-count {
+    font-size: 0.7rem;
+  }
+
+  .single-tweet .profile-img {
+    width: 40px;
+  }
+  .tweet-options {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 323px) {
+  .you-reposted p,
+  .you-reposted span {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 313px) {
+  .tweet-info p {
+    font-size: 0.8rem;
+  }
+  .tweet-account #name {
+    max-width: 120px;
+  }
+}
+
+@media screen and (max-width: 291px) {
+  .you-reposted p,
+  .you-reposted span {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 285px) {
+  .tweet-account #name {
+    font-size: 0.8rem;
+  }
+  .feature-icon {
+    font-size: 0.8rem;
+  }
+  .feature-count {
+    font-size: 0.62rem;
+  }
+  .single-tweet {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .you-reposted {
+    padding-left: 5px;
+  }
+}
+
+@media screen and (max-width: 268px) {
+  .tweet-info p {
+    font-size: 0.7rem;
+    padding-right: 20px;
+  }
+  .tweet-features {
+    justify-content: flex-start;
+  }
+  .tweet-account #name {
+    margin-right: 0px;
+    max-width: 100px;
+  }
+  .tweet-account #username {
+    margin-right: 3px;
+  }
+  .tweet-account #name {
+    max-width: 100px;
+  }
+}
+
+@media screen and (max-width: 248px) {
+  .tweet-info p {
+    font-size: 0.7rem;
+  }
+  .tweet-content-img {
+    width: 90%;
+  }
+}

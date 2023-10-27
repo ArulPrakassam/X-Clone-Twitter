@@ -1,0 +1,164 @@
+/* home section */
+
+.section-container {
+  color: var(--secondary);
+  margin-left: 350px;
+  border-left: 0.5px solid var(--border-color);
+  border-right: 0.5px solid var(--border-color);
+  width: 600px;
+  min-height: 100vh;
+}
+
+.title {
+  margin-left: 20px;
+}
+.title h1 {
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+/* name username timecss */
+#name,
+#username {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#name {
+  font-size: 1rem;
+  font-weight: 500;
+  max-width: 135px;
+  color: var(--secondary);
+}
+
+#username {
+  font-size: 0.87rem;
+  color: var(--main-color-2);
+  max-width: 130px;
+}
+/* #time */
+#time {
+  font-size: 0.87rem;
+  color: var(--main-color-2);
+  white-space: nowrap;
+}
+/* #link */
+#link {
+  color: var(--main-color);
+  cursor: pointer;
+  overflow-wrap: break-word;
+}
+#link > a {
+  color: var(--main-color);
+}
+
+#link:hover {
+  text-decoration: underline;
+}
+
+/* post tweet button */
+.post-tweet-button {
+  border-radius: 100px;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  transition: var(--transition);
+  width: 100%;
+}
+.post-tweet-btn {
+  background-color: var(--main-color);
+  border-radius: inherit;
+  padding: 15px 17px;
+  width: 100%;
+  font-size: 1.2rem;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.post-tweet-btn:disabled {
+  opacity: 0.6;
+  cursor: auto;
+}
+.desktop-asidebar-container .post-tweet-btn:hover {
+  filter: brightness(95%);
+}
+
+.post-tweet-button a {
+  width: 100%;
+  border-radius: inherit;
+}
+
+/* error message */
+
+.error-message {
+  color: var(--main-color);
+  text-align: center;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 1301px) {
+  .section-container {
+    margin-left: 140px;
+  }
+  .post-tweet-button {
+    margin: 0;
+    border-radius: 100%;
+  }
+
+  .post-tweet-btn {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .section-container {
+    margin-left: 120px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .section-container {
+    margin-left: 75px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .section-container {
+    margin-left: 0;
+    border: none;
+    width: 100%;
+  }
+  .home-section .header-content {
+    justify-content: space-evenly !important;
+  }
+}
+
+@media screen and (max-width: 438px) {
+  #time {
+    font-size: 0.77rem;
+  }
+}
+
+@media screen and (max-width: 382px) {
+  .title h1 {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .home-section .logo {
+    width: 35px;
+  }
+}
+@media screen and (max-width: 229px) {
+  .title h1 {
+    font-size: 1rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 90px;
+    white-space: nowrap;
+  }
+}

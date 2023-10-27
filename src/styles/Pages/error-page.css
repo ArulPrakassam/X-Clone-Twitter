@@ -1,0 +1,32 @@
+/* error page section */
+
+.error-page-section {
+  border: none;
+  margin-top: 150px;
+  width: 100%;
+}
+.error-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+.error-message p {
+  font-size: 1.2rem;
+  color: var(--main-color-2);
+}
+
+@media screen and (max-width: 500px) {
+  .error-page-section {
+    margin-top: 0;
+  }
+  .error-message {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .error-message p {
+    font-size: 1rem;
+  }
+}

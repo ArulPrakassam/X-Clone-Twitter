@@ -1,0 +1,9 @@
+/* explore section */
+.explore-section .searchbar {
+  width: 80%;
+  margin-bottom: 0;
+  margin-left: 20px;
+}
+.explore-section .latest-trending-single-item:hover {
+  background-color: var(--background-hover-2);
+}

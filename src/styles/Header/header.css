@@ -1,0 +1,94 @@
+/* home header */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: var(--primary);
+}
+
+/* header top */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+.header-top .profile-img {
+  width: 40px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+/* header top left */
+.header-top-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* header top icons */
+.header-top-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 10px;
+}
+.header-top-icons span {
+  font-size: 1.1rem;
+  border-radius: 100%;
+  padding: 6px;
+  cursor: pointer;
+}
+.header-top-icons span:hover {
+  background-color: var(--background-hover);
+}
+
+/* back arrow */
+
+.back-arrow {
+  font-size: 1.1rem;
+  color: var(--secondary);
+  margin-left: 20px;
+  background-color: transparent;
+  border: none;
+  padding: 6px;
+  padding-top: 8px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.back-arrow:hover {
+  background-color: var(--background-hover);
+}
+
+@media screen and (max-width: 500px) {
+  /* home header */
+  .sticky-header {
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-out;
+  }
+  .header-top {
+    padding-top: 10px;
+  }
+  .home-section .header-top {
+    justify-content: center;
+    position: relative;
+  }
+
+  .home-section .header-top-left {
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    width: 40px;
+    cursor: pointer;
+  }
+  .section-header .header-content {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header-top .profile-img {
+    width: 35px;
+  }
+}

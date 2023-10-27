@@ -1,0 +1,69 @@
+/* compose tweet modal */
+
+.compose-tweet-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--tweet-modal);
+  display: flex;
+  justify-content: center;
+  z-index: 4;
+}
+
+.compose-tweet-modal-container {
+  z-index: 5;
+  background-color: var(--primary);
+  width: 500px;
+  height: max-content;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+.compose-tweet-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-close-btn {
+  font-size: 1.2rem;
+  color: var(--secondary);
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.compose-tweet-modal-header .post-tweet-button {
+  margin-right: 10px;
+  width: auto;
+  border-radius: 100px;
+}
+
+.compose-tweet-modal-header .post-tweet-btn {
+  font-size: 0.88rem;
+  padding: 8px 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .compose-tweet-modal-container {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    border-radius: 0;
+    padding-top: 10px;
+  }
+}
+@media screen and (max-width: 363px) {
+  .compose-tweet-modal-header.post-tweet-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+@media screen and (max-width: 285px) {
+  .compose-tweet-modal-header .post-tweet-btn {
+    font-size: 0.8rem;
+    padding: 7px 14px;
+  }
+}
