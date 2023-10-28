@@ -7,18 +7,24 @@ import "../../styles/Components/tweets-feed.css";
 
 const TweetsFeed = ({ data }) => {
   const { superText } = useGlobalContext();
-  const refArray = useRef([]);
-  refArray.current = data.map(() => createRef());
+  const refImageArray = useRef([]);
+  const refProfileImageArray = useRef([]);
+  refProfileImageArray.current = data.map(() => createRef());
+  refImageArray.current = data.map(() => createRef());
 
   //for lazy loading of images
   useEffect(() => {
     const loadImage = (img) => {
       const src = img.getAttribute("data-src");
-      if (!src) {
+      const profileSrc = img.getAttribute("data-profileSrc");
+      if (src) {
+        img.src = src;
+        img.parentElement.classList.add("loaded");
+      } else if (profileSrc) {
+        img.src = profileSrc;
+      } else {
         return;
       }
-      img.src = src;
-      img.parentElement.classList.add("loaded");
     };
     const imgOptions = {
       threshold: 0,
@@ -36,7 +42,13 @@ const TweetsFeed = ({ data }) => {
       });
     }, imgOptions);
 
-    refArray.current.forEach((image) => {
+    refProfileImageArray.current.forEach((image) => {
+      if (image.current) {
+        imgObserver.observe(image.current);
+      }
+    });
+
+    refImageArray.current.forEach((image) => {
       if (image.current) {
         imgObserver.observe(image.current);
       }
@@ -76,7 +88,12 @@ const TweetsFeed = ({ data }) => {
                 className="profile-img"
                 onLoad={(e) => (e.currentTarget.style.background = "none")}
               >
-                <img src={picture} alt={name} />
+                <img
+                  src=""
+                  alt={name}
+                  ref={refProfileImageArray.current[index]}
+                  data-profileSrc={picture}
+                />
               </div>
               <div className="tweet-content">
                 <div className="tweet-account-wrapper">
@@ -102,7 +119,7 @@ const TweetsFeed = ({ data }) => {
                     <img
                       src=""
                       alt={alt ? alt : title}
-                      ref={refArray.current[index]}
+                      ref={refImageArray.current[index]}
                       data-src={urlToImage}
                       width="300"
                       height="200"
