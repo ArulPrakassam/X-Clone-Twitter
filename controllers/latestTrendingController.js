@@ -21,7 +21,7 @@ const whoToFollow = async (req, res) => {
       .status(200)
       .json({ data: whotToFollowData, count: whotToFollowData.count });
   }
-  res.status(200).json({ message: "Please Try again later..." });
+  res.status(404).json({ message: "Please Try again later..." });
 };
 
 module.exports = { whatIsHappening, whoToFollow };

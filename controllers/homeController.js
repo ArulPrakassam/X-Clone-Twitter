@@ -91,7 +91,7 @@ const home = async (req, res) => {
   if (data) {
     return res.status(200).json({ data, count: data.length });
   }
-  res.status(200).json({ message: "Please Try again later..." });
+  res.status(404).json({ message: "Please Try again later..." });
 };
 
 module.exports = { home, randomUsers };

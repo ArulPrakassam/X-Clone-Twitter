@@ -32,7 +32,7 @@ const allNotifications = async (req, res) => {
       count: notifications.length,
     });
   }
-  res.status(200).json({ message: "Please Try again later..." });
+  res.status(404).json({ message: "Please Try again later..." });
 };
 
 const verifiedNotifications = async (req, res) => {
@@ -43,7 +43,7 @@ const verifiedNotifications = async (req, res) => {
       count: notifications.length,
     });
   }
-  res.status(200).json({ message: "Please Try again later..." });
+  res.status(404).json({ message: "Please Try again later..." });
 };
 
 const mentionNotifications = async (req, res) => {

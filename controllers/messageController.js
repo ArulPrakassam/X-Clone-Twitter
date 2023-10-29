@@ -31,6 +31,6 @@ const messages = async (req, res) => {
       .json({ data: totalMessages, count: totalMessages.length });
   }
 
-  res.status(200).json({ message: "Please Try again later..." });
+  res.status(404).json({ message: "Please Try again later..." });
 };
 module.exports = { messages };
