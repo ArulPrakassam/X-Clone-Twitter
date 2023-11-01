@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { useGlobalContext } from "../context";
 import logo from "../assets/x-twitter-logo.png";
@@ -19,6 +19,9 @@ import "../styles/Header/header.css";
 
 const Home = () => {
   const [selected, setSelected] = useState(localStorage.getItem("view") || 0);
+  const [disable, setDisable] = useState(true);
+
+  const inputRef = useRef();
 
   const {
     windowSize,
@@ -60,7 +63,13 @@ const Home = () => {
         </Header>
 
         <div className="home-content">
-          {windowSize > 500 && <ComposeTweet />}
+          {windowSize > 500 && (
+            <ComposeTweet
+              disable={disable}
+              setDisable={setDisable}
+              inputRef={inputRef}
+            />
+          )}
           {Number(selected) === 0 ? (
             <ForYou homeFeed={homeFeed} setHomeFeed={setHomeFeed} />
           ) : (

@@ -1,10 +1,4 @@
-import React, {
-  useState,
-  useEffect,
-  useContext,
-  useCallback,
-  useRef,
-} from "react";
+import React, { useState, useEffect, useContext, useCallback } from "react";
 
 const AppContext = React.createContext();
 
@@ -20,15 +14,6 @@ export const AppProvider = ({ children }) => {
   const [lightMode, setLightMode] = useState(
     JSON.parse(localStorage.getItem("light-mode")) || false
   );
-
-  const inputRef = useRef();
-
-  const [disable, setDisable] = useState(true);
-
-  const composeTweet = useCallback(() => {
-    inputRef.current.value = "";
-    setDisable(true);
-  }, []);
 
   const [homeFeed, setHomeFeed] = useState([]);
   const [homeFollowingFeed, setHomeFollowingFeed] = useState([]);
@@ -149,10 +134,6 @@ export const AppProvider = ({ children }) => {
         superText,
         lightMode,
         setLightMode,
-        inputRef,
-        disable,
-        setDisable,
-        composeTweet,
         homeFeed,
         setHomeFeed,
         homeFollowingFeed,

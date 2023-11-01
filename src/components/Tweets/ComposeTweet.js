@@ -1,4 +1,5 @@
 import { useGlobalContext } from "../../context";
+import { useCallback } from "react";
 import {
   BiImageAlt,
   MdOutlineGifBox,
@@ -8,9 +9,8 @@ import {
 import "../../styles/basic.css";
 import "../../styles/Components/compose-tweet.css";
 
-const ComposeTweet = () => {
-  const { windowSize, composeTweet, disable, setDisable, inputRef } =
-    useGlobalContext();
+const ComposeTweet = ({ disable, setDisable, inputRef }) => {
+  const { windowSize } = useGlobalContext();
 
   return (
     <section className="compose-tweet-section">
@@ -60,7 +60,11 @@ const ComposeTweet = () => {
           </div>
 
           {windowSize > 500 && (
-            <ComposeButton composeTweet={composeTweet} disable={disable} />
+            <ComposeButton
+              disable={disable}
+              setDisable={setDisable}
+              inputRef={inputRef}
+            />
           )}
         </div>
       </div>
@@ -68,7 +72,13 @@ const ComposeTweet = () => {
   );
 };
 
-const ComposeButton = ({ composeTweet, disable }) => {
+const ComposeButton = ({ disable, setDisable, inputRef }) => {
+  const composeTweet = useCallback(() => {
+    console.log(inputRef.current.value);
+    inputRef.current.value = "";
+    setDisable(true);
+  }, []);
+
   return (
     <div className="post-tweet-button">
       <button

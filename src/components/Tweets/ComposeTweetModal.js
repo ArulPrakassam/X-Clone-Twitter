@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useGlobalContext } from "../../context";
 import { AiOutlineClose, BsArrowLeft } from "../../Icons";
@@ -9,7 +9,9 @@ import "../../styles/Components/compose-tweet.css";
 import "../../styles/Components/compose-tweet-modal.css";
 
 const ComposeTweetModal = () => {
-  const { windowSize, composeTweet, disable } = useGlobalContext();
+  const { windowSize } = useGlobalContext();
+  const [disable, setDisable] = useState(true);
+  const inputRef = useRef();
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -45,11 +47,19 @@ const ComposeTweetModal = () => {
             {windowSize > 500 ? <AiOutlineClose /> : <BsArrowLeft />}
           </button>
           {windowSize <= 500 && (
-            <ComposeButton composeTweet={composeTweet} disable={disable} />
+            <ComposeButton
+              disable={disable}
+              setDisable={setDisable}
+              inputRef={inputRef}
+            />
           )}
         </div>
 
-        <ComposeTweet />
+        <ComposeTweet
+          disable={disable}
+          setDisable={setDisable}
+          inputRef={inputRef}
+        />
       </div>
     </section>
   );

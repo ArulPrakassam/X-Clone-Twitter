@@ -16,7 +16,7 @@ const TweetsFeed = ({ data }) => {
   useEffect(() => {
     const loadImage = (img) => {
       const src = img.getAttribute("data-src");
-      const profileSrc = img.getAttribute("data-profileSrc");
+      const profileSrc = img.getAttribute("data-profilesrc");
       if (src) {
         img.src = src;
         img.parentElement.classList.add("loaded");
@@ -92,7 +92,7 @@ const TweetsFeed = ({ data }) => {
                   src=""
                   alt={name}
                   ref={refProfileImageArray.current[index]}
-                  data-profileSrc={picture}
+                  data-profilesrc={picture}
                 />
               </div>
               <div className="tweet-content">
