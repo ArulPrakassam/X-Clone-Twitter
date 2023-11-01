@@ -27,6 +27,7 @@ export const AppProvider = ({ children }) => {
 
   const composeTweet = useCallback(() => {
     inputRef.current.value = "";
+    setDisable(true);
   }, []);
 
   const [homeFeed, setHomeFeed] = useState([]);
