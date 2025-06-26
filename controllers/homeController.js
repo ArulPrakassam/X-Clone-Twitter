@@ -1,5 +1,5 @@
-// const fetch = (...args) =>
-//   import("node-fetch").then(({ default: fetch }) => fetch(...args));
+const fetch = (...args) =>
+  import("node-fetch").then(({ default: fetch }) => fetch(...args));
 
 const fetchData = async (category) => {
   try {
@@ -13,7 +13,7 @@ const fetchData = async (category) => {
     );
     const text = await response.text();
     console.log("Raw response: fetchData", text);
-    const data = await response.json();
+    const data = JSON.parse(text);
 
     const results = data.articles;
     if (results.length > 0) {
@@ -60,7 +60,7 @@ const randomUsers = async (length) => {
     );
     const text = await response.text();
     console.log("Raw response: randomUsers", text);
-    const data = await response.json();
+    const data = JSON.parse(text);
     const results = data.results;
 
     if (results.length > 0) {
