@@ -172,3 +172,12 @@ const App = () => {
   );
 };
 export default App;
+
+//Compose Tweet:
+// The first one is used when the user goes directly to /compose-tweet (like typing the URL).
+
+// The second one is used when you open the modal over another page — it renders on top of the previous screen without replacing it.
+
+// history makes React Router think you're still on the previous page → so modal route doesn't match
+// The second <Routes> uses the real URL → so the modal does match and appears
+// Together, this creates the effect of a modal on top of the previous page

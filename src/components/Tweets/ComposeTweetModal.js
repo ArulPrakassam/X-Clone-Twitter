@@ -29,9 +29,6 @@ const ComposeTweetModal = () => {
   };
   useEffect(() => {
     document.documentElement.style.overflow = "hidden";
-  }, []);
-
-  useEffect(() => {
     document.title = "Compose new post / X";
   }, []);
 
