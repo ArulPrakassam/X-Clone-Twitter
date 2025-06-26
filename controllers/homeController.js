@@ -11,10 +11,7 @@ const fetchData = async (category) => {
         },
       }
     );
-    const text = await response.text();
-    console.log("Raw response: fetchData", text);
-    const data = JSON.parse(text);
-
+    const data = await response.json();
     const results = data.articles;
     if (results.length > 0) {
       const items = results.filter(
@@ -42,7 +39,6 @@ const fetchData = async (category) => {
             ...users[index],
           };
         });
-        console.log("NewsItems  ", newsItems);
 
         return newsItems;
       }
@@ -56,12 +52,10 @@ const fetchData = async (category) => {
 const randomUsers = async (length) => {
   try {
     const response = await fetch(
-      `https://randomuser.me/api/?nat=us&inc=name,picture&results=${length}`
+      `https://api.freeapi.app/api/v1/public/randomusers?page=1&inc=name,picture&limit=${length}`
     );
-    const text = await response.text();
-    console.log("Raw response: randomUsers", text);
-    const data = JSON.parse(text);
-    const results = data.results;
+    const data = await response.json();
+    const results = data.data.data;
 
     if (results.length > 0) {
       const count = (val) => Math.ceil(Math.random() * val);
