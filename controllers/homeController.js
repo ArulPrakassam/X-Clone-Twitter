@@ -11,6 +11,8 @@ const fetchData = async (category) => {
         },
       }
     );
+    const text = await response.text();
+    console.log("Raw response: fetchData", text);
     const data = await response.json();
 
     const results = data.articles;
@@ -40,6 +42,8 @@ const fetchData = async (category) => {
             ...users[index],
           };
         });
+        console.log("NewsItems  ", newsItems);
+
         return newsItems;
       }
     }
@@ -54,6 +58,8 @@ const randomUsers = async (length) => {
     const response = await fetch(
       `https://randomuser.me/api/?nat=us&inc=name,picture&results=${length}`
     );
+    const text = await response.text();
+    console.log("Raw response: randomUsers", text);
     const data = await response.json();
     const results = data.results;
 
