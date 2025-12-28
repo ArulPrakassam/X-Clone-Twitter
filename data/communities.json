@@ -1,22 +1,22 @@
 [
   {
     "name": "Android Fans",
-    "profile": "https://pbs.twimg.com/profile_images/2840218614/5980a6646f691a7b1b00fd02273f0a08_400x400.jpeg",
-    "members": 1900
+    "profile": "https://res.cloudinary.com/dhxjitf9n/image/upload/v1766902785/X%20clone/android-fans.jpg",
+    "members": 19000
   },
   {
     "name": "Eat better, live better",
-    "profile": "https://pbs.twimg.com/community_banner_img/1503631370421436421/bUDyK2CK?format=jpg&name=240x240",
+    "profile": "https://res.cloudinary.com/dhxjitf9n/image/upload/v1766903132/X%20clone/eat-better-live-better.png",
     "members": 20000
   },
   {
     "name": "Samsung Community",
-    "profile": "https://pbs.twimg.com/community_banner_img/1687351000129048576/WDFlHBek?format=jpg&name=360x360",
+    "profile": "https://res.cloudinary.com/dhxjitf9n/image/upload/v1766902720/X%20clone/samsung-community.jpg",
     "members": 4592002
   },
   {
-    "name": "SmartPhone",
-    "profile": "https://pbs.twimg.com/media/FECRpOaUUAQVDL-?format=jpg&name=small",
-    "members": 5000
+    "name": "Microsoft Windows",
+    "profile": "https://res.cloudinary.com/dhxjitf9n/image/upload/v1766903313/X%20clone/microsoft-windows-community.png",
+    "members": 500000
   }
 ]
